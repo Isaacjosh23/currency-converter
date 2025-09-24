@@ -50,7 +50,7 @@ export const CurrencyConverter = () => {
   console.log(amount, baseCurrency, quoteCurrency);
 
   return (
-    <div className="flex flex-col items-center gap-20">
+    <div className="flex flex-col items-center gap-20 bg-[#fbfbff] p-20 rounded-2xl w-[30rem] md:w-[34rem]">
       <CurrencyInput
         amount={amount}
         setAmount={setAmount}

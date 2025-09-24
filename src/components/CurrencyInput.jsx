@@ -27,20 +27,27 @@ export const CurrencyInput = ({
 
   return (
     <div className="flex flex-col gap-8 items-center">
-      <input
-        inputMode="decimal"
-        pattern="[0-9]*"
-        value={amount}
-        onChange={(e) => {
-          const value = e.target.value;
+      <div className="flex flex-col gap-3">
+        <label className="block text-xl font-semibold" htmlFor="amount">
+          Amount
+        </label>
+        <input
+          inputMode="decimal"
+          pattern="[0-9]*"
+          id="amount"
+          value={amount}
+          onChange={(e) => {
+            const value = e.target.value;
 
-          if (value === "" || /^[0-9]*\.?[0-9]*$/.test(value)) {
-            setAmount(value);
-          }
-        }}
-        type="text"
-        className="border rounded-[6px] border-black w-72 h-11 px-6 py-2 text-2xl"
-      />
+            if (value === "" || /^[0-9]*\.?[0-9]*$/.test(value)) {
+              setAmount(value);
+            }
+          }}
+          type="text"
+          placeholder="Enter Amount"
+          className="border rounded-[6px] border-[#040f16] w-72 h-14 px-6 py-2 text-2xl placeholder:text-xl placeholder:font-semibold font-semibold"
+        />
+      </div>
 
       <div className="flex items-center gap-6">
         <select

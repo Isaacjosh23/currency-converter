@@ -7,23 +7,25 @@ export const CurrencyOutput = ({
   quoteCurrency,
 }) => {
   return (
-    <p className="text-2xl">
+    <p
+      className={`text-2xl font-bold text-center ${
+        amount && baseCurrency === quoteCurrency ? "text-red-500 font-bold" : ""
+      }`}
+    >
       {/* {outputAmount
         ? `${amount} ${baseCurrency} to ${quoteCurrency} is ${
             currencySymbols[quoteCurrency]
           } ${baseCurrency === quoteCurrency ? amount : outputAmount}`
         : "How much do you want to convert?"} */}
 
-      {!amount && "How much do you want to convert?"}
+      {!amount && "Enter an amount to convert"}
 
       {amount &&
         baseCurrency !== quoteCurrency &&
         outputAmount &&
         `${amount} ${baseCurrency} to ${quoteCurrency} is ${currencySymbols[quoteCurrency]} ${outputAmount}`}
 
-      {amount &&
-        baseCurrency === quoteCurrency &&
-        "Can't convert to the same currency. Please select another currency"}
+      {amount && baseCurrency === quoteCurrency && "Same currency not allowed"}
     </p>
   );
 };
