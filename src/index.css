@@ -11,10 +11,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  /* margin-top: 2rem; */
   font-family: "Inter", sans-serif;
   background: #040f16;
-  /* margin: ; */
 }
 
 input:focus,
