@@ -47,8 +47,6 @@ export const CurrencyConverter = () => {
     converter();
   }, [amount, baseCurrency, quoteCurrency]);
 
-  console.log(amount, baseCurrency, quoteCurrency);
-
   return (
     <div className="flex flex-col items-center gap-20 bg-[#fbfbff] p-20 rounded-2xl w-[30rem] md:w-[34rem]">
       <CurrencyInput

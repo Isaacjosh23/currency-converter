@@ -12,12 +12,6 @@ export const CurrencyOutput = ({
         amount && baseCurrency === quoteCurrency ? "text-red-500 font-bold" : ""
       }`}
     >
-      {/* {outputAmount
-        ? `${amount} ${baseCurrency} to ${quoteCurrency} is ${
-            currencySymbols[quoteCurrency]
-          } ${baseCurrency === quoteCurrency ? amount : outputAmount}`
-        : "How much do you want to convert?"} */}
-
       {!amount && "Enter an amount to convert"}
 
       {amount &&

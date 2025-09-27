@@ -10,15 +10,12 @@ export const CurrencyInput = ({
 }) => {
   const [selectedCurrency, setSelectedCurrency] = useState({});
 
-  console.log(selectedCurrency);
-
   useEffect(() => {
     async function currencies() {
       const res = await fetch(`https://api.frankfurter.dev/v1/currencies`);
 
       const data = await res.json();
 
-      // console.log(data);
       setSelectedCurrency(data);
     }
 
